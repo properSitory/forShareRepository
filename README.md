@@ -1,7 +1,7 @@
 # Coming soon ;)
 
 Repository destiné à montrer des exemples de code personnel. Il va bien évidemment évoluer au fils du temps. Je suis trop focaliser sur mon apprentissage pour le compléter maintenant.
-Cependant on y trouvera de Angular, React, NodeJS (work in progress...)
+Cependant on y trouvera de l'Angular, React, NodeJS (work in progress...)
 
 Vous pouvez déjà voir de petites choses.
 - CaféFlorette: un petit site tuto html css basique
