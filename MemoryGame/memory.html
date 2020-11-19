@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+    <style>
+        .carte {
+            border: 1px;
+            border-color: black;
+            border-style: solid;
+        }
+    </style>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+
+    <div class="container container-fluid">
+
+        <div class="row">
+            <img src="images/greta.jpeg" alt="cachée" id="row_0-col_0" class="carte col-md-2 img-fluid">
+            <img src="images/image0.jpeg" alt="cachée" id="row_0-col_1" class="carte col-md-2 img-fluid">
+            <img src="images/image1.jpeg" alt="cachée" id="row_0-col_2" class="carte col-md-2 img-fluid">
+            <img src="images/greta.jpeg" alt="cachée" id="row_0-col_3" class="carte col-md-2 img-fluid">
+        </div>
+
+        <div class="row">
+            <img src="images/image2.jpeg" alt="cachée" id="row_1-col_0" class="carte col-md-2 img-fluid">
+            <img src="images/image3.jpeg" alt="cachée" id="row_1-col_1" class="carte col-md-2 img-fluid">
+            <img src="images/image4.jpeg" alt="cachée" id="row_1-col_2" class="carte col-md-2 img-fluid">
+            <img src="images/image5.jpeg" alt="cachée" id="row_1-col_3" class="carte col-md-2 img-fluid">
+        </div>
+
+        <div class="row">
+            <img src="images/image6.jpeg" alt="cachée" id="row_2-col_0" class="carte col-md-2 img-fluid">
+            <img src="images/image7.jpeg" alt="cachée" id="row_2-col_1" class="carte col-md-2 img-fluid">
+            <img src="images/image8.jpeg" alt="cachée" id="row_2-col_2" class="carte col-md-2 img-fluid">
+            <img src="images/image9.jpeg" alt="cachée" id="row_2-col_3" class="carte col-md-2 img-fluid">
+        </div>
+
+        <div class="row">
+            <img src="images/image0.jpeg" alt="cachée" id="row_3-col_0" class="carte col-md-2 img-fluid">
+            <img src="images/image1.jpeg" alt="cachée" id="row_3-col_1" class="carte col-md-2 img-fluid">
+            <img src="images/image2.jpeg" alt="cachée" id="row_3-col_2" class="carte col-md-2 img-fluid">
+            <img src="images/image3.jpeg" alt="cachée" id="row_3-col_3" class="carte col-md-2 img-fluid">
+        </div>
+
+        <div class="row">
+            <img src="images/greta.jpeg" alt="cachée" id="row_4-col_0" class="carte col-md-2 img-fluid">
+            <img src="images/image4.jpeg" alt="cachée" id="row_4-col_1" class="carte col-md-2 img-fluid">
+            <img src="images/image5.jpeg" alt="cachée" id="row_4-col_2" class="carte col-md-2 img-fluid">
+            <img src="images/greta.jpeg" alt="cachée" id="row_4-col_3" class="carte col-md-2 img-fluid">
+        </div>
+
+    </div>
+    <h1>Card Flip with Text</h1>
+    <h3>Hover over the image below:</h3>
+
+    <div class="flip-card">
+        <div class="flip-card-inner">
+            <div class="flip-card-front">
+                <img src="./images/greta.jpeg" alt="Avatar" style="width:300px;height:300px;">
+            </div>
+            <div class="flip-card-back">
+                <h1>John Doe</h1>
+                <p>Architect & Engineer</p>
+                <p>We love that guy</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./other/shuffle.js"></script>
+<script src="./controllers/game_controller.js"></script>
+
+</html>
