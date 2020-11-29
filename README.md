@@ -1,4 +1,4 @@
-# Coming soon
+# Welcome
 
 Repository destiné à montrer des exemples de code personnel. Il va bien évidemment évoluer au fils du temps.
 Cependant on y trouvera de l'Angular, React, NodeJS (work in progress...)
