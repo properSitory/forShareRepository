@@ -25,19 +25,8 @@ export class MapService {
       'Street Maps': this.streetMaps,
       'Wikimedia Maps': this.wMaps
     },
-    // overlays: {
-    //   'Mt. Rainier Summit': this.summit,
-    //   'Mt. Rainier Paradise Start': this.paradise,
-    //   'Mt. Rainier Climb Route': this.route
-    // }
   };
 
-  // mapOptions: any = {
-  //   layers: [{ url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', attribution: 'Open Street Map' }],
-  //   zoom: 5,
-  //   // center: [46.879966, -121.726909]
-  //   center: latLng(43.2951, - 0.370797, 0)
-  // };
   mapOptions: any = {
     layers: [
       tileLayer(
@@ -47,8 +36,7 @@ export class MapService {
         })
     ],
     zoom: 12,
-    // center: [46.879966, -121.726909]
-    center: latLng(43.294699628704194, -0.3682994842529297, 0)
+    center: latLng(44.844246441624016, -0.5748510360717775, 0)
   };
 
   constructor() { }
