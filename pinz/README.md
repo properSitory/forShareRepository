@@ -20,7 +20,9 @@ https://blog.mestwin.net/use-leaflet-in-your-angular-8-project-for-interactive-m
 
 https://blog.mestwin.net/angular-8-with-leaflet-map-geocoding-using-nominatim-api/
 
-**Building Maps in Angular Using Leaflet, Part 1:** **Generating Maps**
+**Building Maps in Angular Using Leaflet, Part 1:**
+
+**Generating Maps**
 https://www.digitalocean.com/community/tutorials/angular-angular-and-leaflet
 
 **Tuto 2ème partie :**
