@@ -1,0 +1,80 @@
+<!-- <div class="map"
+  leaflet
+  (leafletMapReady)="onMapReady($event)"
+  [leafletOptions]="options"
+  [leafletLayersControl]="layersControl">
+</div> -->
+<div class="card">
+	<div class="card-body">
+
+		<div class="row">
+
+			<!-- Control Form -->
+			<div class="col-sm-12 col-md-6 col-lg-4">
+
+				<form>
+
+					<!-- Zoom Levels -->
+					<div class="form-group row">
+						<div class="col-4">
+							<label class="col-form-label float-right">
+								Zoom
+							</label>
+						</div>
+						<div class="col">
+							<select class="form-control" name="zoom" [(ngModel)]="formZoom" required>
+								<option *ngFor="let z of zoomLevels" [value]="z">{{z}}</option>
+							</select>
+						</div>
+					</div>
+
+					<!-- Lat/Long -->
+					<div class="form-group row">
+						<div class="col-4">
+							<label class="col-form-label float-right">Latitude</label>
+						</div>
+						<div class="col">
+							<input type="text" class="form-control" name="lat" [(ngModel)]="lat" required>
+						</div>
+					</div>
+					<div class="form-group row">
+						<div class="col-4">
+							<label class="col-form-label float-right">
+								Longitude
+							</label>
+						</div>
+						<div class="col">
+							<input type="text" class="form-control" name="lng" [(ngModel)]="lng" required>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<div class="col offset-4">
+							<div class="clearfix">
+								<button type="button" class="btn btn-primary"
+									(click)="doApply()">Apply</button>
+									<button type="button" class="btn btn-primary"
+									(click)="popmarker()">Supprimer le dernier marqueur</button>
+							</div>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+			<!-- Map -->
+			<!-- <div class="col-sm-12 col-md-6 col-lg-8"> -->
+
+			<div id="map" leaflet [leafletOptions]="mapService.mapOptions"
+				[leafletLayersControl]="mapService.mapOptions.layers" [leafletZoom]="mapService.mapOptions.zoom"
+				(leafletZoomChange)="onZoomChange($event)" [leafletCenter]="mapService.mapOptions.center"
+				(leafletCenterChange)="onCenterChange($event)" (leafletMapReady)="onMapReady($event)"
+				[leafletLayers]="markers" (leafletClick)="addMarker($event)">
+			</div>
+
+			<!-- </div> -->
+
+		</div>
+	</div>
+</div>
+<!-- <app-coordinate-control></app-coordinate-control> -->i
