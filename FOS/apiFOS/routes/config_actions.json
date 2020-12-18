@@ -1,0 +1,208 @@
+{
+    "GET/groups": {
+        "controler": "sequelizer",
+        "sql_query": "SELECT * FROM groups",
+        "sql_query_by_id": "SELECT * FROM groups WHERE id =",
+        "return_type": "application/json"
+    },
+    "POST/create_groups": {
+        "controler": "insertSQL",
+        "sql_query": "INSERT INTO groups (name, active, trainings_id, dateStart, dateEnd) VALUES (?,?)",
+        "params_query": [
+            "name",
+            "active",
+            "trainings_id",
+            "dateStart",
+            "dateEnd"
+        ],
+        "redirect": "/groups"
+    },
+    "POST/update_groups": {
+        "controler": "updateSQL",
+        "sql_query": "UPDATE groups SET name=?, active=?, trainings_id=?, dateStart=?, dateEnd=? WHERE id=?",
+        "params_query": [
+            "name",
+            "active",
+            "trainings_id",
+            "dateStart",
+            "dateEnd"
+        ],
+        "redirect": "/groups"
+    },
+    "GET/delete_groups": {
+        "controler": "deleteSQL",
+        "sql_query": "DELETE FROM groups WHERE id=?",
+        "redirect": "/groups"
+    },
+    "GET/learners": {
+        "controler": "sequelizer",
+        "sql_query": "SELECT * FROM learners",
+        "sql_query_by_id": "SELECT * FROM learners WHERE id =",
+        "return_type": "application/json"
+    },
+    "POST/create_learners": {
+        "controler": "insertSQL",
+        "sql_query": "INSERT INTO learners (firstname, lastname, genders_id, birthdate, adress, zipcode, email, telephone) VALUES (?,?,?,?,?,?,?,?)",
+        "params_query": [
+            "firstname",
+            "lastname",
+            "genders_id",
+            "birthdate",
+            "adress",
+            "zipcode",
+            "email",
+            "telephone"
+        ],
+        "redirect": "/learners"
+    },
+    "POST/update_learners": {
+        "controler": "updateSQL",
+        "sql_query": "UPDATE learners SET firstname=?, lastname=?, genders_id=?, birthdate=?, adress=?, zipcode=?, email=?, telephone=? WHERE id=?",
+        "params_query": [
+            "firstname",
+            "lastname",
+            "genders_id",
+            "birthdate",
+            "adress",
+            "zipcode",
+            "email",
+            "telephone"
+        ],
+        "redirect": "/learners"
+    },
+    "GET/delete_learners": {
+        "controler": "deleteSQL",
+        "sql_query": "DELETE FROM learners WHERE id=?",
+        "redirect": "/learners"
+    },
+    "GET/sectors": {
+        "controler": "sequelizer",
+        "sql_query": "SELECT * FROM sectors",
+        "sql_query_by_id": "SELECT * FROM sectors WHERE id =",
+        "return_type": "application/json"
+    },
+    "POST/create_sectors": {
+        "controler": "insertSQL",
+        "sql_query": "INSERT INTO sectors (name, active) VALUES (?,?)",
+        "params_query": [
+            "name",
+            "active"
+        ],
+        "redirect": "/sectors"
+    },
+    "POST/update_sectors": {
+        "controler": "updateSQL",
+        "sql_query": "UPDATE sectors SET name=?, active=? WHERE id=?",
+        "params_query": [
+            "name",
+            "active"
+        ],
+        "redirect": "/sectors"
+    },
+    "GET/delete_sectors": {
+        "controler": "deleteSQL",
+        "sql_query": "DELETE FROM sectors WHERE id=?",
+        "redirect": "/sectors"
+    },
+    "GET/states": {
+        "controler": "sequelizer",
+        "sql_query": "SELECT * FROM states",
+        "sql_query_by_id": "SELECT * FROM states WHERE id =",
+        "return_type": "application/json"
+    },
+    "POST/create_states": {
+        "controler": "insertSQL",
+        "sql_query": "INSERT INTO states (tmp, cnull, loljesaispasquoimettre) VALUES (?,?,?)",
+        "params_query": [
+            "contracttype",
+            "dateStart",
+            "dateEnd",
+            "employer",
+            "jobname",
+            "trainingsFinish",
+            "comment",
+            "learners_id",
+            "groups_id"
+        ],
+        "redirect": "/states"
+    },
+    "POST/update_states": {
+        "controler": "updateSQL",
+        "sql_query": "UPDATE states SET tmp=?, cnull=?, loljesaispasquoimettre=? WHERE id=?",
+        "params_query": [
+            "contracttype",
+            "dateStart",
+            "dateEnd",
+            "employer",
+            "jobname",
+            "trainingsFinish",
+            "comment",
+            "learners_id",
+            "groups_id"
+        ],
+        "redirect": "/states"
+    },
+    "GET/delete_states": {
+        "controler": "deleteSQL",
+        "sql_query": "DELETE FROM states WHERE id=?",
+        "redirect": "/states"
+    },
+    "GET/trainings": {
+        "controler": "sequelizer",
+        "sql_query": "SELECT * FROM trainings",
+        "sql_query_by_id": "SELECT * FROM trainings WHERE id =",
+        "return_type": "application/json"
+    },
+    "POST/create_trainings": {
+        "controler": "insertSQL",
+        "sql_query": "INSERT INTO trainings (name, active) VALUES (?,?)",
+        "params_query": [
+            "name",
+            "active"
+        ],
+        "redirect": "/trainings"
+    },
+    "POST/update_trainings": {
+        "controler": "updateSQL",
+        "sql_query": "UPDATE trainings SET name=?, active=? WHERE id=?",
+        "params_query": [
+            "name",
+            "active"
+        ],
+        "redirect": "/trainings"
+    },
+    "GET/delete_trainings": {
+        "controler": "deleteSQL",
+        "sql_query": "DELETE FROM trainings WHERE id=?",
+        "redirect": "/trainings"
+    },
+    "GET/years": {
+        "controler": "sequelizer",
+        "sql_query": "SELECT * FROM years",
+        "sql_query_by_id": "SELECT * FROM years WHERE id =",
+        "return_type": "application/json"
+    },
+    "POST/create_years": {
+        "controler": "insertSQL",
+        "sql_query": "INSERT INTO years (dateStart, dateEnd) VALUES (?,?)",
+        "params_query": [
+            "dateStart",
+            "dateEnd"
+        ],
+        "redirect": "/years"
+    },
+    "POST/update_years": {
+        "controler": "updateSQL",
+        "sql_query": "UPDATE years SET dateStart=?, dateEnd=? WHERE id=?",
+        "params_query": [
+            "dateStart",
+            "dateEnd"
+        ],
+        "redirect": "/years"
+    },
+    "GET/delete_years": {
+        "controler": "deleteSQL",
+        "sql_query": "DELETE FROM years WHERE id=?",
+        "redirect": "/years"
+    } 
+}

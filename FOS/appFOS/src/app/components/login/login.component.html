@@ -1,0 +1,12 @@
+<form #f="ngForm" (ngSubmit)="formLogin()">
+    <div padding>
+        <label for="login">Identifiant</label>
+        <input name="login" type="email" placeholder="Votre login" ngModel required [(ngModel)]="data.login">
+        <label for="password">Mot de passe</label>
+        <input name="password" type="password" placeholder="Votre mot de passe" ngModel required [(ngModel)]="data.password">
+    </div>
+
+    <div padding>
+        <button size="large" type="submit" [disabled]="f.invalid" expand="block">Se connecter !</button>
+    </div>
+</form>
