@@ -1,0 +1,1 @@
+importez le dump sql et configurez dans model l'acce à votre phpmyadmin pour tester.
