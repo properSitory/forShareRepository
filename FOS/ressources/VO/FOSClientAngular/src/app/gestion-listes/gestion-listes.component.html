@@ -1,0 +1,128 @@
+<div class="card-panel teal">
+  <h3 style="text-align: center">Gestion des listes</h3>
+</div>
+
+<!--CONTENANT GLOBAL -->
+<div class="card-panel teal">
+
+
+
+
+  <!--Boite de visualisation blanche-->
+  <div class="card-panel">
+
+    <span class="help is-info" *ngIf="isLoading">Loading...</span>
+    <table class="table" *ngIf="!isLoading">
+      <thead (secteurAdded)="appendSecteur($event)">
+        <tr>
+          <th>Secteur</th>
+          <th>Formation</th>
+          <th>Groupe</th>
+        </tr>
+      </thead>
+
+      <tbody>
+
+
+
+        <tr *ngFor="let secteur of secteurs">
+          <td>
+            {{secteur.intitule}}
+          </td>
+          <tbody>
+            <tr *ngFor="let formation of secteur.formations">
+              <td>
+                {{formation.intitule}}
+              </td>
+              <tbody>
+                  <tr *ngFor="let groupe of formation.groupes">
+                    <td>
+                      {{groupe.intitule}}
+                    </td>
+                  </tr>
+                </tbody>
+            </tr>
+          </tbody>
+          
+        </tr>
+        <tr ng-repeat="obj in (jsonArray | myFilter)">
+          <td>{{ obj.attr1 }}</td>
+          <td>{{ obj.attr2 }}</td>
+          ...
+          <td>{{ obj.attrN }}</td>
+      </tr>
+         
+       
+        
+
+        <!--<td *ngFor="let groupe of formation.groupes">{{ groupe.intitule }}</td>-->
+      <tr>
+          <td>
+            <form>
+              <button type="button" class="button is-primary" [class.is-loading]="isUpdatingSecteur(secteur.id)"
+                (click)="deleteSecteur(secteur.id)">Delete Secteur</button>
+            </form>
+          </td>
+
+        </tr>
+      </tbody>
+
+    </table>
+
+
+
+
+
+
+
+
+
+
+    
+  </div>
+
+
+
+
+
+  <!--Trois champs texte-->
+  <div class="row">
+    <div class="input-field col s4">
+      <input id="first_name" type="text" class="validate">
+      <label for="first_name">Année de formation</label>
+    </div>
+    <div class="input-field col s4">
+      <input id="first_name" type="text" class="validate">
+      <label for="first_name">Secteur</label>
+    </div>
+    <div class="input-field col s4">
+      <input id="first_name" type="text" class="validate">
+      <label for="first_name">Formation</label>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <a class="waves-effect waves-light btn col s12 m4 l4"><i class="material-icons right">cloud</i>Ajouter</a>
+    </div>
+    <div>
+      <a class="waves-effect waves-light btn col s12 m4 l4"><i class="material-icons right">cloud</i>Supprimer</a>
+    </div>
+    <div>
+      <a class="waves-effect waves-light btn col s12 m4 l4"><i class="material-icons right">cloud</i>Enregistrer</a>
+    </div>
+  </div>
+
+
+
+
+  <span class="help is-danger">{{ errors }}</span>
+  <div class="field">
+    <div class="control">
+      <input class="input" #secteurIntitule (keydown)="errors = ''">
+    </div>
+  </div>
+  <button type="button" class="button is-primary" [class.is-loading]="isLoading"
+    (click)="addSecteur(secteurIntitule.value)">Ajouter
+    Intitulé</button>
+
+</div>

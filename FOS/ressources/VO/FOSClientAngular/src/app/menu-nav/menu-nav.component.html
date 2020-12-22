@@ -1,0 +1,33 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <ul class="navbar-menu is-active buttons">
+    <li>
+      <a class="button is-link" *ngIf="isAuthenticated" href routerLink="tableau-de-bord">Tableau de
+        bord</a>
+    </li>
+    <li>
+      <a class="button is-link" *ngIf="isAuthenticated" href routerLink="/ajoutPromo">Ajouter promotion</a>
+    </li>
+    <li>
+      <a class="button is-link" *ngIf="isAuthenticated" href routerLink="gestion-donnees">Modification données
+        apprenant</a></li>
+    <li>
+      <a class="button is-link" *ngIf="isAuthenticated" href routerLink="selection-groupe">Selectionner
+        groupe</a>
+    </li>
+    <li>
+      <a class="button is-link" *ngIf="isAuthenticated" href routerLink="gestion-listes">Gestion liste</a>
+    </li>
+    <li>
+      <a class="button is-link" *ngIf="isAuthenticated" routerLink="visualisation">Visualisation</a>
+    </li>
+    <li>
+      <a class="button is-link" *ngIf="!isAuthenticated" (click)="login()"> Login </a>
+    </li>
+    <li>
+      <a class="button is-link" *ngIf="!isAuthenticated" (click)="logout()"> Logout </a>
+    </li>
+    <li>
+      <a class="button is-link" *ngIf="isAuthenticated" (click)="logout()"> Logout </a>
+    </li>
+  </ul>
+</nav>

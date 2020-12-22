@@ -1,0 +1,46 @@
+<section class="formulaire">
+        <div *ngIf="!connexion.connecte">
+            <h1>Connexion</h1>
+      
+            <div class="alert alert-danger" *ngIf="authErreur">
+                <button type="button" class="close" aria-label="Close" (click)="authErreur = false"><span aria-hidden="true">&#215;</span></button> Argh, essaie encore.
+            </div>
+      
+            <div class="alert alert-danger" *ngIf="connexion.connecte">
+                <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&#215;</span></button> Vous êtes connecté
+            </div>
+            
+            <form (ngSubmit)="connexion.stockConnexion(true)" #f="ngForm" *ngIf="!connexion.connecte">
+      
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+                    <label for="login">Identifiant</label>
+                    <input id="login" class="form-control" name="login" [(ngModel)]="donneesID.login" required #loginCtrl="ngModel">
+                    <div *ngIf="loginCtrl.control.dirty && loginCtrl.control.hasError('required')">Identifiant requis</div>
+                </div>
+      
+                <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !password.valid }">
+                    <label for="mdp">Mot de passe</label>
+                    <input id="mdp" class="form-control" type="password" name="mdp" [(ngModel)]="donneesID.mdp" required #mdpCtrl="ngModel">
+                    <div *ngIf="mdpCtrl.control.dirty && mdpCtrl.control.hasError('required')">Mot de passe requis</div>
+                </div>
+      
+                <button type="submit" *ngIf="!connexion.connecte" [disabled]="f.invalid" href routerLink="accueil">Se connecter !</button>
+      
+            </form>
+            <!--<form (ngSubmit)="ConnexionService.connecte = true">
+              <div class="form-group">
+              <label for="login">Identifiant</label>
+              <input id="login" class="form-control" name="login" [(ngMo-
+              del)]="donneesID.login" required>
+              </div>
+              <div class="form-group">
+              <label for="mdp">Mot de passe</label>
+              <input id="mdp" class="form-control" type="password"
+              name="mdp" [(ngModel)]="donneesID.mdp" required>
+              </div>
+              </form>-->
+        </div>
+        
+        
+      </section>
+      <button (click)="connexion.stockConnexion(false)" href routerLink="connexion" *ngIf="connexion.connecte" style="margin-left: auto; margin-right: auto;">Se déconnecter</button>

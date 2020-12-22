@@ -1,0 +1,117 @@
+ <!-- BLOC HAUT  TITRE + PARTIE AVEC LES 4 SELECT OPTIONS "FORMATION"-->
+ <div class="card-panel teal" style="margin-top: 30px;">
+
+   <h3 style="text-align: center">Selection groupe</h3>
+   <div class="row">
+
+    <mat-form-field class="col s3 m3 l3">
+      <label>Annee</label>
+      <mat-select>
+        <mat-option *ngFor="let annee of annees" [value]="annee.date_debut" class="col s3 m3 l3 teal lighten-4">
+          {{annee.date_debut}} - {{annee.date_fin}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    
+
+
+     <mat-form-field class="col s3 m3 l3">
+       <label>Secteur</label>
+       <mat-select>
+         <mat-option *ngFor="let secteur of secteurs" [value]="secteur.intitule" class="col s3 m3 l3 teal lighten-4">
+           {{secteur.intitule}}
+         </mat-option>
+       </mat-select>
+     </mat-form-field>
+     
+
+
+
+     <mat-form-field class="col s3 m3 l3">
+       <label>Formation</label>
+       <mat-select panelClass="myPanelClass">
+         <mat-option *ngFor="let formation of formations" [value]="formation.intitule" class="col s3 m3 l3 teal lighten-4">
+           {{formation.intitule}}
+         </mat-option>
+       </mat-select>
+     </mat-form-field>
+
+
+
+     <mat-form-field class="col s3 m3 l3">
+       <label>Groupe</label>
+       <mat-select panelClass="myPanelClass">
+         <mat-option *ngFor="let intitule of groupes" [value]="intitule.intitule" class="col s3 m3 l3 teal lighten-4">
+           {{intitule.intitule}}
+         </mat-option>
+       </mat-select>
+     </mat-form-field>
+
+
+
+   </div>
+ </div>
+
+
+
+ <!-- BLOC BAS-->
+
+ <div class="col l3 m6 s12">
+   <div class="row">
+
+     <!--Bloc gauche-->
+     <div class="col-content col l4 m4 s4">
+       <div class="card teal">
+         Ici ce sera l'affichage de la liste eleve qui seront mis en surbrillance au click pour signifier qu'ils sont
+         sélectionnés
+       </div>
+     </div>
+
+     <!--Bloc centre-->
+     <div class="col-content col l4 m4 s4">
+       <div class="card-checkbox teal">
+         <form action="#" class="p-b-1card-content">
+
+           <div clss="row">
+             <div>
+               <p>
+                 <input type="checkbox" class="checkbox-indigo filled-in" id="filled-in-box" checked="checked" />
+                 <label for="filled-in-box">Filled in</label>
+               </p>
+               <p>
+                 <input type="checkbox" class="checkbox-indigo filled-in" id="filled-in-box2" checked="checked" />
+                 <label for="filled-in-box2">Filled in</label>
+               </p>
+               <p>
+                 <input type="checkbox" class="checkbox-indigo filled-in" id="filled-in-box3" checked="checked" />
+                 <label for="filled-in-box3">Filled in</label>
+               </p>
+             </div>
+             <div>
+               <p>
+                 <input type="checkbox" class="checkbox-indigo filled-in" id="filled-in-box4" checked="checked" />
+                 <label for="filled-in-box4">Filled in</label>
+               </p>
+               <p>
+                 <input type="checkbox" class="checkbox-indigo filled-in" id="filled-in-box5" checked="checked" />
+                 <label for="filled-in-box5">Filled in</label>
+               </p>
+               <p>
+                 <input type="checkbox" class="checkbox-indigo filled-in" id="filled-in-box6" checked="checked" />
+                 <label for="filled-in-box6">Filled in</label>
+               </p>
+             </div>
+           </div>
+         </form>
+       </div>
+     </div>
+
+     <!--Bloc droit-->
+     <div class="col-content col l4 m4 s4">
+       <div class="card teal">
+         Ici le rendu en fonction des eleves et des filtres sélectionnés
+       </div>
+     </div>
+   </div>
+
+ </div>
