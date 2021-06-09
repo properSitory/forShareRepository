@@ -1,7 +1,7 @@
 # Welcome
 
 Bonjour!
-Vous trouverez ici quelques exemples de code personnel que j'ai extrait des différentes activités réalisées depuis le début de ma reconversion. Ce repo n'est pas complet et ne le sera sans doute jamais. Le temps de me trouver un emploi durable du moins je vais continuer de l'alimenter notament avec les app ou certaines parties seulement sur lesquelles j'essaie de progresser actuellement.
+Vous trouverez ici quelques exemples de code personnel que j'ai extrait des différentes activités réalisées depuis le début de ma reconversion. Ce repo n'est pas complet et ne le sera sans doute jamais. Il évoluera sans doute.
 
 - CaféFlorette: un petit site tuto html css basique responsive.
 - HallOfFlamme: le tutorial de data binding d'Angular.
@@ -9,8 +9,3 @@ Vous trouverez ici quelques exemples de code personnel que j'ai extrait des diff
 - MemoryGames: un 'jeu de paires' en vanillaJS fait dans le cadre d'un exercice pour travailler l'algo. Il contient des règles particulières (dont vous pouvez prendre connaissance sur le readme qu'il contient), et certains bugs à corriger mais est en partie fonctionnel. Le score et votre nom de joueur est stocké dans votre **localstorage** un bouton vous permet de **clear**.
 - pinz: Une map Angular/leaflet avec pins générés au click souris + d'infos voir readme à la racine de l'app
 - Snake: Un petit jeu classique de snake fait en canvas.
-
-- a venir:
-
-**ReactECommerce**
-Une petite page d'e-commerce basique avec un panier. Un exercice de data binding inter composant via les props.
